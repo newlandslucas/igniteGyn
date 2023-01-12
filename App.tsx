@@ -9,13 +9,14 @@ import {
 import { Loading } from './src/components/Loading';
 import { THEME } from './src/theme';
 import { Signin } from './src/screens/Signin';
+import { Signup } from './src/screens/Signup';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold})
 
   return (
     <NativeBaseProvider theme={THEME}>
-      {fontsLoaded ? <Signin /> : <Loading />}
+      {fontsLoaded ? <Signup /> : <Loading />}
       <StatusBar style="light" translucent backgroundColor='transparent'/>
     </NativeBaseProvider>
   );
